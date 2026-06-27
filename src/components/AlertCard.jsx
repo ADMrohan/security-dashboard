@@ -6,12 +6,9 @@ function AlertCard({id,type,severity,source,status}){
     const navigate = useNavigate();
     return (
     <div onClick={()=>{ return navigate(`/alerts/${id}`)}} style={{ cursor: "pointer" }}>
-        <ul>Alert Details:
+        <ul><b>Alert</b>
             <div>Alert Id: {id}</div>
-            <div>Alert Type:{type} </div>
             <div>Alert Severity:<SeverityBadge severity= {severity}/> </div>
-            <div>Alert source IP: {source}</div>
-            <div>Alert Current Status: {status}</div>
         </ul>
     </div>
     );
